@@ -1,0 +1,20 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java Compilation
+*.class
+
+# Output folder
+out/
+
+# Logs y errors
+*.log
+hs_err_pid*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Executables
+*.jar
