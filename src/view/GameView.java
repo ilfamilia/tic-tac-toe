@@ -62,4 +62,16 @@ public class GameView extends JFrame {
             mainPanel.add(button);
         }
     }
+
+    public JLabel getScoreLabel() {
+        return scoreLabel;
+    }
+
+    public JLabel getWinnerLabel() {
+        return winnerLabel;
+    }
+
+    public JButton[] getButtons() {
+        return buttons;
+    }
 }
