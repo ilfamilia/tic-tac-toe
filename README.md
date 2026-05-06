@@ -60,10 +60,15 @@ tic-tac-toe/
 ## Screenshots
 
 ### Gameplay
-![Gameplay](assets/screenshots/gameplay.png)
+
+<p align="center">
+  <img src="assets/screenshots/gameplay.png" width="400">
+</p>
 
 ### Winner Screen
-![Winner Screen](assets/screenshots/winner-screen.png)
+<p align="center">
+    <img src="assets/screenshots/winner-screen.png" width="400">
+</p>
 
 ## Future Improvements
 
