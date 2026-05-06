@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 
 
 
@@ -37,9 +38,12 @@ public class GameView extends JFrame {
         mainPanel = new JPanel(new GridLayout(3, 3));
 
         infoPanel = new JPanel();
-        scorePanel = new JPanel();
 
-        scoreLabel = new JLabel("<html>Score:<br>X: 0<br>O: 0</html>");
+        scorePanel = new JPanel();
+        // scorePanel.setPreferredSize(new Dimension(100, 100));
+        // scorePanel.setBackground(Color.BLUE);
+
+        scoreLabel = new JLabel();
 
         infoLabel = new JLabel();
 

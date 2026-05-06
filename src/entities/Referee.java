@@ -11,7 +11,7 @@ public class Referee {
     }
 
     public boolean isGameEnded() {
-        if (areAllButtonsDisabled() || !getWinner().equals("\0")) {
+        if (areAllButtonsDisabled() || !getWinner().isEmpty()) {
             return true;
         }
 
@@ -46,7 +46,7 @@ public class Referee {
             return signatures[2];
         }
 
-        return "\0";
+        return "";
     }
 
     private boolean areAllButtonsDisabled() {

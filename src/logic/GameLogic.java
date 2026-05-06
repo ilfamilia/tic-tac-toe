@@ -30,6 +30,8 @@ public class GameLogic implements ActionListener{
         for(JButton button : gameView.getButtons()) {
             button.addActionListener(this);
         }
+
+        updateBoardScore();
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -45,7 +47,7 @@ public class GameLogic implements ActionListener{
                     gameView.getInfoLabel().setText("Is " + nextPlayer + " turn");
                 } else {
                     String winner = ref.getWinner();
-                    if (!winner.equals("\0")) {
+                    if (!winner.isEmpty()) {
                         JOptionPane.showMessageDialog(gameView, "Player " + winner + " won!");
                         resetGame();
                     } else {
@@ -59,11 +61,33 @@ public class GameLogic implements ActionListener{
 
 
     private void resetGame() {
+
+        updateScore();
+
         gameView.getInfoLabel().setText("");
 
         for (JButton button : gameView.getButtons()) {
             button.setEnabled(true);
             button.setText("");
+        }
+
+        updateBoardScore();
+    }
+
+    private void updateBoardScore() {
+        gameView.getScoreLabel().setText("<html>Score:" +
+                "<br>X: " + player1.getScore() +
+                "<br>O: " + player2.getScore() +
+                "</html>");
+    }
+
+    private void updateScore() {
+        if (!ref.getWinner().isEmpty()) {
+            if (ref.getWinner().equals(player1.getSignature())) {
+                player1.setScore(player1.getScore() + 1);
+            } else {
+                player2.setScore(player2.getScore() + 1);
+            }
         }
     }
 }
