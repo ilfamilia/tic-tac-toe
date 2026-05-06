@@ -15,9 +15,9 @@ public class GameView extends JFrame {
     private JPanel headerPanel;
     private JPanel mainPanel;
     private JPanel scorePanel;
-    private JPanel winnerPanel;
+    private JPanel infoPanel;
     private JLabel scoreLabel;
-    private JLabel winnerLabel;
+    private JLabel infoLabel;
     private JButton[] buttons;
     private final int BUTTONS_NUM = 9;
 
@@ -36,12 +36,12 @@ public class GameView extends JFrame {
 
         mainPanel = new JPanel(new GridLayout(3, 3));
 
-        winnerPanel = new JPanel();
+        infoPanel = new JPanel();
         scorePanel = new JPanel();
 
         scoreLabel = new JLabel("<html>Score:<br>X: 0<br>O: 0</html>");
 
-        winnerLabel = new JLabel("X wins!");
+        infoLabel = new JLabel();
 
         buttons = new JButton[BUTTONS_NUM];
 
@@ -52,10 +52,10 @@ public class GameView extends JFrame {
         this.add(headerPanel, BorderLayout.NORTH);
         this.add(this.mainPanel, BorderLayout.CENTER);
 
-        headerPanel.add(winnerPanel, BorderLayout.CENTER);
+        headerPanel.add(infoPanel, BorderLayout.CENTER);
         headerPanel.add(scorePanel, BorderLayout.EAST);
 
-        winnerPanel.add(winnerLabel);
+        infoPanel.add(infoLabel);
         scorePanel.add(scoreLabel);
 
         for(JButton button : buttons) {
@@ -67,8 +67,8 @@ public class GameView extends JFrame {
         return scoreLabel;
     }
 
-    public JLabel getWinnerLabel() {
-        return winnerLabel;
+    public JLabel getInfoLabel() {
+        return infoLabel;
     }
 
     public JButton[] getButtons() {
