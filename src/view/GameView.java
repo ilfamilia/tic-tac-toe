@@ -30,6 +30,7 @@ public class GameView extends JFrame {
         this.setTitle("Tic-tac-toe");
         this.setSize(400, 550);
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
 
@@ -40,8 +41,6 @@ public class GameView extends JFrame {
         infoPanel = new JPanel();
 
         scorePanel = new JPanel();
-        // scorePanel.setPreferredSize(new Dimension(100, 100));
-        // scorePanel.setBackground(Color.BLUE);
 
         scoreLabel = new JLabel();
 
